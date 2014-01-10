@@ -1,0 +1,206 @@
+// Responsive Grid - Managed in /theme/sass/snippets/_grid.scss
+
+// Now For Some of my Breakpoints Loves: 
+//	1801 - Full Screen
+//	1800 - Largest Screen
+//	1680 - Large Screen
+//	1480 - Big Screen
+//	1200 - Regular Screen
+//	 992 - Large Tablet
+//	 768 - Tablet
+//	 480 - Phone
+//	 
+//	 
+//	 Breakpoints
+//		@include min-screen(1801px) { @content };
+//		@include max-screen(1800px) { @content };
+//		@include max-screen(1680px) { @content };
+//		@include max-screen(1200px) { @content };
+//		@include max-screen(992px) { @content };
+//		@include max-screen(768px) { @content };
+
+
+.site_width { min-width: 940px; }
+@include min-screen(1200px) { .site_width { max-width: 1170px; } }
+@include min-screen(1480px) { .site_width { max-width: 1400px; } }
+@include min-screen(1680px) { .site_width { max-width: 1600px; } }
+
+.site_width {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.row {
+	width: 100%;
+	display: inline-block;
+}
+
+.row:after {
+  clear: both;
+}
+
+@include min-screen(1200px) {
+  .row {
+    margin-right: -15px;
+    margin-left: -15px;
+  }
+}
+
+.row .row {
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.col1,
+.col2,
+.col3,
+.col4,
+.col5,
+.col6,
+.col7,
+.col8,
+.col9,
+.col10,
+.col11,
+.col12 {
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.col1,
+.col2,
+.col3,
+.col4,
+.col5,
+.col6,
+.col7,
+.col8,
+.col9,
+.col10,
+.col11,
+.col12 {
+  float: left;
+}
+
+	.col1 {
+	  width: 8.333333333333332%;
+	}
+	
+	.col2 {
+	  width: 16.666666666666664%;
+	}
+	
+	.col3 {
+	  width: 25%;
+	}
+	
+	.col4 {
+	  width: 33.33333333333333%;
+	}
+	
+	.col5 {
+	  width: 41.66666666666667%;
+	}
+	
+	.col6 {
+	  width: 50%;
+	}
+	
+	.col7 {
+	  width: 58.333333333333336%;
+	}
+	
+	.col8 {
+	  width: 66.66666666666666%;
+	}
+	
+	.col9 {
+	  width: 75%;
+	}
+	
+	.col10 {
+	  width: 83.33333333333334%;
+	}
+	
+	.col11 {
+	  width: 91.66666666666666%;
+	}
+	
+	.col12 {
+	  width: 100%;
+	}
+	
+	
+	.col1-offset {
+	  margin-left: 8.333333333333332%;
+	}
+	
+	.col2-offset {
+	  margin-left: 16.666666666666664%;
+	}
+	
+	.col3-offset {
+	  margin-left: 25%;
+	}
+	
+	.col4-offset {
+	  margin-left: 33.33333333333333%;
+	}
+	
+	.col5-offset {
+	  margin-left: 41.66666666666667%;
+	}
+	
+	.col6-offset {
+	  margin-left: 50%;
+	}
+	
+	.col7-offset {
+	  margin-left: 58.333333333333336%;
+	}
+	
+	.col8-offset {
+	  margin-left: 66.66666666666666%;
+	}
+	
+	.col9-offset {
+	  margin-left: 75%;
+	}
+	
+	.col10-offset {
+	  margin-left: 83.33333333333334%;
+	}
+	
+	.col11-offset {
+	  margin-left: 91.66666666666666%;
+	}
+	
+	.col12-offset {
+	  margin-left: 100%;
+	}
+	
+	
+	
+// Additional Layout Classes
+
+.pull-right {
+	float: right;
+}
+
+.text_right {
+	text-align: right;
+}
+
+.center {
+	text-align: center;
+}
+
+.invisible {
+	visibility: hidden;
+}
+
+.inline {
+	display: inline-block;
+}

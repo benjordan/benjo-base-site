@@ -1,0 +1,75 @@
+// Styles for Job History Pages - Managed in /theme/sass/pages/_job_history.scss
+
+.job_history {
+
+	table {
+		position: relative;
+		a {
+			color: $green;
+		}
+	}
+	
+	.register {
+		position: absolute;
+		top: 0;
+		right: 1em;
+		
+		a {
+			color: white;
+			font-size: .825em;
+			background-color: #D3D3D3;
+			padding: 0.45em 2em;
+			@include text-shadow(0 -1px 1px rgba(0,0,0,0.2));
+		}
+	}
+
+	h2 {
+		margin: 0;
+		margin-bottom: 0.75em;
+		margin: .875em 0 !important;
+		line-height: 1.125em;
+		padding: 0;
+		font-weight: 300;
+	}
+	
+	.functions {
+	
+		height: 250px;
+		overflow: auto;
+	
+		ul {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+		
+		li {
+		}
+	}
+	
+	.job_info {
+	
+		td {
+			vertical-align: text-top;
+		}
+	
+		h3 {
+			font-size: 2em;
+			padding: 0;
+			margin: 5px 0;
+		}
+		
+		p {
+			font-size: 1.25em;
+		}
+	}
+	
+	.cancel {
+		color: $yellow;
+		
+		a {
+			color: $yellow;
+		}
+	}
+
+}

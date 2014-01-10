@@ -1,4 +1,3 @@
-credera-base-site
-=================
+# Credera Base Frontend Code
 
-Credera Base Site
+A library of default styles and files for starting a project.

@@ -1,0 +1,202 @@
+/* Basic Form Styles */
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0;
+  
+  &:focus {
+	  outline-color: #999;
+  }
+}
+
+input[type="text"], input[type="password"], textarea {
+	width: 100%;
+	height: 50px;
+	padding: 1em;
+	margin-bottom: 1em;
+	border: 1px solid #CCC8C2;
+}
+
+input[type="number"] {
+	width: 100%;
+	height: 50px;
+	padding: 0 1em;
+	border: 1px solid #CCC8C2;
+}
+
+input[type="text"].datepicker {
+	background: url('../img/icon-date.png') 97% center no-repeat #fff;
+}
+
+input[type="checkbox"] {
+    display: none;
+    margin-right: 15px;
+}
+
+input[type="checkbox"] + label {
+	font-size: .875em;
+	color: $text;
+	letter-spacing: normal;
+	text-transform: none;
+}
+
+input[type="checkbox"] + label span {
+    width: 17px;
+    height: 17px;
+    margin: -1px 10px 0 0;
+    vertical-align: middle;
+    background: image-url('checkbox.png') left top no-repeat;
+    cursor: pointer;
+    display: inline-block;
+}
+
+input[type="checkbox"]:checked + label span {
+    background: image-url('checkbox.png') -17px top no-repeat;
+}
+
+input[type="radio"] {
+	float: left;
+	display: inline-block;
+}
+
+.radio_label {
+	margin: 10px 15px 10px 10px;
+	float: left;
+	display: inline-block;
+}
+
+label {
+	width: 100%;
+	font-size: .6875em;
+	color: #c7c5bf;
+	text-transform: uppercase;
+	letter-spacing: .1em;
+	display: inline-block;
+}
+
+.select {
+	
+	select {
+		width: 100%;
+		height: 50px;
+		font-size: 1.25em;
+		border: 1px solid #D8D5D0;
+		padding: 10px 40px 10px 15px;
+		border-radius: 0;
+		-webkit-appearance: none;
+	}
+	
+	label {position:relative}
+	label:after {
+	    content:'<>';
+	    font: 1.5em "Consolas", monospace;
+	    color: #aaa;
+	    -webkit-transform:rotate(90deg);
+	    -moz-transform:rotate(90deg);
+	    -ms-transform:rotate(90deg);
+	    transform:rotate(90deg);
+	    right: 15px;
+	    top: 15px;
+	    padding: 0 0 2px;
+	    position: absolute;
+	    pointer-events: none;
+	}
+}
+
+textarea {
+	min-height: 200px; 
+}
+	
+button a {
+	color: white;
+	
+	&:hover {
+		color: white;
+	}
+}
+
+button,
+input {
+  line-height: normal;
+}
+
+button,
+select {
+  text-transform: none;
+}
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+textarea {
+  overflow: auto;
+  vertical-align: top;
+}
+
+input,
+button,
+select,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+button,
+input,
+select[multiple],
+textarea {
+  background-image: none;
+}
+
+input[type=submit] {
+	padding: 10px 30px;
+	color:#666666;
+	font-size: 16px;
+	font-weight: 400;
+	text-transform: uppercase;
+	border:1px solid #c4c4c4;
+	background-color:#f4f4f4;
+	cursor: pointer;
+	@include text-shadow(0 1px 0 rgba(255,255,255,1));
+	@include border-radius(5px);
+	@include box-shadow(0px 1px 0px #ffffff, inset);
+	@include background-image(linear-gradient(#f4f4f4, #d6d6d6));
+}

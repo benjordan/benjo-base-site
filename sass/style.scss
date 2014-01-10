@@ -1,0 +1,78 @@
+// Use Compass, save time
+@import "compass";
+@import "compass/layout/stretching";
+
+
+// Operations
+@import "operations/mixins";
+@import "operations/functions";
+@import "operations/media-queries";
+
+// Varibles
+@import "variables/typography";
+@import "variables/colors";
+
+// Pages
+@import "pages/all";
+
+
+// Snippets
+@import "snippets/all";
+
+*, *:before, *:after {
+	@include box-sizing (border-box);	
+}
+
+.block {
+	display: block;
+}
+
+
+html {
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body {
+	@include primary_font;
+	font-size: 100%;
+	line-height: 1.5em;
+	color: $text;
+	background-color: $neutral1;
+/* 	border-top: 4px solid $green; */
+}
+
+html, body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+}
+
+audio,
+canvas,
+img,
+video {
+    vertical-align: middle;
+}
+
+[class*="col"] img {
+	max-width: 100%;
+}
+
+footer {
+	width: 100%;
+	background-color: #282828;
+	color: #a5a39f;
+	font-size: .75em;
+	margin-top: 6.25em;
+	padding: 3em 0 6em 0;
+	float: left;
+	
+	a {
+		color: white;
+	}
+}
+
+

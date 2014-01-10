@@ -1,0 +1,44 @@
+button, .button, input[type=button] {
+	padding: 15px 40px;
+	margin-bottom: 15px;
+	color: white;
+	font-size: 1em;
+	font-weight: 400;
+	background-color: $green;
+	border: none;
+	cursor: pointer;
+	outline-color: none;
+	@include border-radius(10px);
+	@include box-shadow(inset 0 -4px 0 rgba(0,0,0,.3));
+
+	@media(max-width: 68.4375em) {
+		padding: 10px 30px !important;
+	}
+	
+	@media (max-width: 61.25em) {
+		font-size: .875em;
+	}
+	
+	&:active {
+		position: relative;
+		top: 1px;
+	}
+	
+	&:hover {
+		color: white;
+	}
+	
+	
+	&.disabled {
+		@include background-image(linear-gradient(lighten(#f4f4f4,10%), lighten(#d6d6d6,10%)));
+		color: lighten($text,55%);
+		cursor:default;
+	}
+	
+	&.small {
+		padding: 5px 20px;
+		font-size: .875em;
+		margin: 1em 0;
+	}
+
+}

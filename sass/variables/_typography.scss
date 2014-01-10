@@ -1,0 +1,279 @@
+@import "colors";
+
+@mixin primary_font {
+  font-family: 'Open Sans', sans-serif;
+}
+
+@mixin secondary_font {
+  font-family: 'Open Sans', sans-serif;
+}
+
+@font-face {
+	font-family: 'icomoon';
+	src:url('../fonts/icomoon.eot');
+	src:url('../fonts/icomoon.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/icomoon.woff') format('woff'),
+		url('../fonts/icomoon.ttf') format('truetype'),
+		url('../fonts/icomoon.svg#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[data-filetype="document"] {
+	@include add-icon ($icon-file, inherit);
+	color: lighten($text,20%) !important;
+	
+	&:before {
+		vertical-align: top;
+	}
+	
+	a {
+		color: lighten($text,20%) !important;
+		width: 85%;	
+	}
+}
+
+[data-filetype="note"] {
+	@include add-icon ($icon-note);
+	
+	&:before {
+		vertical-align: middle;
+		line-height: 1;
+	}
+	
+}
+
+small {
+  font-size: 85%;
+}
+
+cite {
+  font-style: normal;
+}
+
+.text-muted {
+  color: $neutral5;
+}
+
+.text-primary {
+  color: $text;
+}
+
+.text-warning {
+  color: $yellow;
+}
+
+.text-danger {
+  color: $red;
+}
+
+.text-success {
+  color: $green;
+}
+
+.text-info {
+  color: $text;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.green {
+	color: $green;
+}
+
+.orange {
+	color: $orange;
+}
+
+.yellow {
+	color: $yellow;
+}
+
+.red {
+	color: $red;
+}
+
+.blue {
+	color: $blue;
+}
+
+h1 {
+    font-size: 3em; /* 48 / 16 */
+    font-weight: 600;
+    line-height: 1em; /* 48 / 48 */
+    margin-bottom: .5em; /* 24 / 48 */
+}
+
+h2 {
+    font-size: 1.875em; /* 30 / 16 */
+    font-weight: 600;
+    line-height: 1.333333333333333em; /* 48 / 36 */
+    margin-bottom: .6666666666666667em; /* 24 / 36 */
+    
+	@media (max-width:73em) { font-size: 1.5em;}
+}
+
+h3 {
+    font-size: 1.5em; /* 24 / 16 */
+    font-weight: 600;
+    line-height: 1em; /* 24 / 24 */
+    margin-bottom: 1em; /* 24 / 24 */
+}
+
+h4 {
+    font-size: 1.3125em; /* 21 / 16 */
+    font-weight: 600;
+    line-height: 1.142857142857143em; /* 24 / 21 */
+    margin-bottom: 1.142857142857143em; /* 24 / 21 */
+}
+
+h5 {
+    font-size: 1.125em; /* 18 / 16 */
+    font-weight: 600;
+    line-height: 1.333333333333333em; /* 24 / 18 */
+    margin-bottom: 1.333333333333333em; /* 24 / 18 */
+}
+
+h6 {
+    font-size: 1em; /* 16 / 16 */
+    font-weight: 600;
+    line-height: 1.5em; /* 24 / 16 */
+    margin-bottom: 1.5em; /* 24 / 16 */
+}
+
+p {
+    font-size: 1em; /* 16 / 16 */
+    line-height: 1.5em; /* 24 / 16 */
+    margin-bottom: 1.5em; /* 24 / 16 */
+}
+
+.page-header {
+  padding-bottom: 9px;
+  margin: 40px 0 20px;
+  border-bottom: 1px solid #eeeeee;
+}
+
+ul,
+ol {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+ul ul,
+ol ul,
+ul ol,
+ol ol {
+  margin-bottom: 0;
+}
+
+.list-unstyled {
+  padding-left: 0;
+  list-style: none;
+}
+
+.list-inline {
+  padding-left: 0;
+  list-style: none;
+}
+
+.list-inline > li {
+  display: inline-block;
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+dl {
+  margin-bottom: 20px;
+}
+
+dt,
+dd {
+  line-height: 1.428571429;
+}
+
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin-left: 0;
+}
+
+a {
+	@include primary_font;
+	@include transition (all .1s ease-in-out);
+	color: $link;
+	text-decoration: none;
+	position: relative;
+	display: inline-block;
+	
+	&:focus { outline: thin dotted; }
+	&:active { outline: 0; }
+	&:hover { 
+		outline: 0; 
+		text-decoration: none;
+		color: $link;
+	}
+	
+}
+
+a.animated::after {
+	position: absolute;
+	top: 0;
+	right: -10px;
+	content: '&raquo';
+	opacity: 0;
+	-webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+	-moz-transition: opacity 0.3s, -moz-transform 0.3s;
+	transition: opacity 0.3s, transform 0.3s;
+	-webkit-transform: translateX(10px);
+	-moz-transform: translateX(10px);
+	transform: translateX(10px);
+}
+
+a.animated:hover::after,
+a.animated:focus::after {
+	opacity: 1;
+	-webkit-transform: translateX(0px);
+	-moz-transform: translateX()(0px);
+	transform: translateX(0px);
+}
+
+
+
+//Site Wide Styled Styles
+.title {
+	color: #b7b7b7;
+	font-size: .625em;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 0.07em;
+	clear: left;
+	display: block;
+}
+
+p, a{
+	font-size: .875em;
+}
+
+
+
+
+//Icons
+
+
+.locked {
+	position: relative;
+	top:2px;
+	padding-right: 5px;
+}
