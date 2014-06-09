@@ -20,7 +20,7 @@
 @import "snippets/all";
 
 *, *:before, *:after {
-	@include box-sizing (border-box);	
+	@include box-sizing (border-box);
 }
 
 .block {
@@ -37,8 +37,8 @@ body {
 	font-size: 100%;
 	line-height: 1.5em;
 	color: $text;
-	background-color: $neutral1;
-/* 	border-top: 4px solid $green; */
+	background-color: white;
+ 	border-top: 4px solid $green;
 }
 
 html, body {
@@ -69,7 +69,7 @@ footer {
 	margin-top: 6.25em;
 	padding: 3em 0 6em 0;
 	float: left;
-	
+
 	a {
 		color: white;
 	}

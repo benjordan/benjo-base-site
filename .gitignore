@@ -1,0 +1,6 @@
+/sass
+config.rb
+.DS_Store
+/.sass-cache/
+
+/config.codekit

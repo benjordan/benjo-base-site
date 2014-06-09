@@ -8,41 +8,6 @@
   font-family: 'Open Sans', sans-serif;
 }
 
-@font-face {
-	font-family: 'icomoon';
-	src:url('../fonts/icomoon.eot');
-	src:url('../fonts/icomoon.eot?#iefix') format('embedded-opentype'),
-		url('../fonts/icomoon.woff') format('woff'),
-		url('../fonts/icomoon.ttf') format('truetype'),
-		url('../fonts/icomoon.svg#icomoon') format('svg');
-	font-weight: normal;
-	font-style: normal;
-}
-
-[data-filetype="document"] {
-	@include add-icon ($icon-file, inherit);
-	color: lighten($text,20%) !important;
-	
-	&:before {
-		vertical-align: top;
-	}
-	
-	a {
-		color: lighten($text,20%) !important;
-		width: 85%;	
-	}
-}
-
-[data-filetype="note"] {
-	@include add-icon ($icon-note);
-	
-	&:before {
-		vertical-align: middle;
-		line-height: 1;
-	}
-	
-}
-
 small {
   font-size: 85%;
 }
@@ -119,7 +84,7 @@ h2 {
     font-weight: 600;
     line-height: 1.333333333333333em; /* 48 / 36 */
     margin-bottom: .6666666666666667em; /* 24 / 36 */
-    
+
 	@media (max-width:73em) { font-size: 1.5em;}
 }
 
@@ -216,15 +181,15 @@ a {
 	text-decoration: none;
 	position: relative;
 	display: inline-block;
-	
+
 	&:focus { outline: thin dotted; }
 	&:active { outline: 0; }
-	&:hover { 
-		outline: 0; 
+	&:hover {
+		outline: 0;
 		text-decoration: none;
 		color: $link;
 	}
-	
+
 }
 
 a.animated::after {
